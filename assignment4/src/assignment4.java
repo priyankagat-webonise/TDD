@@ -18,11 +18,17 @@ public class assignment4 {
 		assertEquals(false, password.validPassword("hellohgk"));
 		assertEquals(false, password.validPassword("hello1123"));
 		assertEquals(false, password.validPassword("@helloghg"));
+		assertEquals(false, password.validPassword("helloabcd"));
+		assertEquals(false, password.validPassword("12345678!@"));
+		assertEquals(false, password.validPassword(""));
+		
 	}
 
 	@Test
 	public void Successtest() {
 		assertEquals(true, password.validPassword("hello12@"));
 		assertEquals(true, password.validPassword("@hello12"));
+		assertEquals(true, password.validPassword("@!hello1245"));
+		assertEquals(true, password.validPassword("@hello#124"));
 	}
 }
