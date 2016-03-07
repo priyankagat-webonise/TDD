@@ -5,7 +5,7 @@ import java.util.regex.Pattern;
 public class Password {
 	public boolean validPassword(String password)
 	{
-		String regex="[A-Za-z0-9]*+[!@#$%^&*]+[A-Za-z0-9]*+";
+		String regex="^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Za-z])[a-zA-Z0-9!@#$%^&*]*$";
 		Pattern pattern=Pattern.compile(regex);
 		Matcher matcher = pattern.matcher(password);
 		
